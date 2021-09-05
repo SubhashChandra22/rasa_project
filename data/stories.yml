@@ -1,0 +1,58 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_looking_for_advisor
+  - action: utter_help
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_looking_for_advisor
+  - action: utter_help
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_looking_for_advisor
+  - action: utter_help
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: Booking for advisor
+  steps:
+  - intent: greet 
+  - action: utter_looking_for_advisor
+  - action: utter_help
+  - intent: looking_for_advisor
+  - action: utter_thanks
+  - action: utter_question
+  - action: utter_pin
+  - intent: Thanks
+  - action: utter_welcome
+
+- story: Register as an advisor
+  steps:
+  - intent: greet 
+  - action: utter_looking_for_advisor
+  - action: utter_help
+  - intent: Already_advisor
+  - action: utter_board
+  - action: utter_connect
+  - action: utter_followup
+  - intent: Thanks
+  - action: utter_welcome
+ 
