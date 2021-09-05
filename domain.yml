@@ -1,0 +1,64 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- looking_for_advisor:
+    use_entities: true
+- Already_advisor:
+    use_entities: true
+- Thanks:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_looking_for_advisor:
+  - text: Hello! Welcome to wiseradvisor.com. Good to see you here.
+  utter_thanks:
+  - text: Thanks for your response
+  utter_question:
+  - text: Your quick response to a few questions will help us match you to the best vetted advisors for you. (Your details will remain secure & confidential.)
+  utter_pin:
+  - text: Kindly provide your zip code. (e.g. 20121)
+  utter_help:
+  - text: How can i assist you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_board:
+  - text: We will be delighted to board you in our team
+  utter_connect:
+  - text: Please click this link [Website](https://www.wiseradvisor.com/advisor_signup.asp?kwd=WA_chatbot)
+  utter_followup:
+  - text: A WiserAdvisor consultant will get back to you shortly once you have completed our short contact form.
+  utter_welcome:
+  - text: Welcome
+actions: []
+forms: {}
+e2e_actions: []
